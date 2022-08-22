@@ -1,0 +1,20 @@
+Instruction 
+
+Feature 
+-Scan ASL Motion 
+-Data Collection (Add New ASL Motion) 
+
+System requirement 
+- Phyton 3.7
+- Webcame 
+
+Module Requirement 
+-Tkinterface 
+-pyttsx3 2.90
+-Tenserflow   2.9.1
+-pillow 9.2.0
+-opencv 4.5.4.60
+-numpy 1.21.6
+-math 
+-time 
+#IMPORTANT!!!:Need to install before proceed the Scripting  
