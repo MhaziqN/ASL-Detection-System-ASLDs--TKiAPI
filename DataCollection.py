@@ -1,8 +1,16 @@
 import cv2
+from tkinter import *
 from cvzone.HandTrackingModule import  HandDetector
 import numpy as np
 import math
 import time
+
+def exit_btn():
+    cap.destroy()
+
+root =Tk()
+root.wm_withdraw()
+
 cap = cv2.VideoCapture(0)
 detector  = HandDetector(maxHands=1)
 
@@ -56,4 +64,22 @@ while True:
         counter += 1
         cv2.imwrite(f'{folder}/Image_{time.time()}.jpg', imgWhite)
         print(counter)
+    elif key == ord('w'):
+
+        root=Tk()
+
+        root.title('Note')
+        root.iconbitmap('AS (1).ico')
+        root.geometry('300x150')
+        root.configure(background="#C1CDCD")
+
+        text_Label = Label(root, text='Successfully add '+ str(counter) + ' Data Capture !!', fg='black', bg='#FFFFFF')
+        text_Label.pack(pady=(30,30))
+        text_Label.config(font=('Amasis MT Pro Medium', 10))
+
+cap.close()
+
+
+root.mainloop()
+
 
